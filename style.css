@@ -1,0 +1,100 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #136a8a, #267871);
+}
+
+.container{
+   width: 35%;
+   height: 500px;
+   background-color: white;
+   margin-top: 5rem;
+   border-radius: 20px;
+
+}
+
+.screenModes{
+    width: 60px;
+    height: 24px;
+    background-color: #9b9b9b;
+    border-radius: 30px;
+    position: absolute;
+    right: 510px;
+    bottom: 600px;
+}
+.screenModes button{
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: transparent;
+
+}
+.nightMode{
+    position: absolute;
+    right: 4px;
+    bottom: 3px;
+   
+}
+.normalMode{
+    position: absolute;
+    right: 30px;
+    bottom: 3px;    
+}
+.nightMode:active{
+    background-color: yellow;
+}
+
+.normalMode:active{
+    background-color: yellow;
+}
+
+.display{
+    
+    position: absolute;
+    top: 150px;
+    width: 34.5%;
+    text-align: end;
+    height: 100px;
+}
+
+.display p{
+    position: absolute;
+   top: 20px;
+   right: 40px;
+   font-size: 30px;
+   font-weight: 400;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;  
+    position: absolute;
+    top: 270px;
+    
+  }
+  .grid-item {
+    background-color: #24262d;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    width: 91.5px;
+    cursor: pointer;
+    color: white;
+    
+    
+  }
+  .grid-item:hover{
+    opacity: 0.5;
+  }
+
+  #equalsBtn{
+    background-color: #e1305b;
+  }
+  
