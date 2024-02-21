@@ -3,28 +3,6 @@ let normalMode = document.querySelector('.normalMode');
 let calcContainer = document.querySelector('.container');
 let display = document.getElementById('displayid');
 
-let allclearBtn = document.getElementById('allClearBtn');
-let clearBtn = document.getElementById('clearBtn');
-let moduloBtn = document.getElementById('moduloBtn');
-let divideBtn = document.getElementById('divideBtn');
-let sevenBtn = document.getElementById('seven');
-let eightBtn = document.getElementById('eight');
-let nineBtn = document.getElementById('nine');
-let multiplyBtn = document.getElementById('multiplyBtn');
-let fourBtn = document.getElementById('four');
-let fiveBtn = document.getElementById('five');
-let sixBtn = document.getElementById('six');
-let minusBtn = document.getElementById('minusBtn');
-let oneBtn = document.getElementById('one');
-let twoBtn = document.getElementById('two');
-let threeBtn = document.getElementById('three');
-let plusBtn = document.getElementById('plusBtn');
-let  zeroBtn = document.getElementById('zero');
-let decimalBtn = document.getElementById('decimalBtn');
-let equalsBtn = document.getElementById('equalsBtn');
-
-
-
 
 
 nightModeBtn.children[0].style.color = "white";
@@ -45,6 +23,40 @@ nightModeBtn.addEventListener("click", function(){
     display.style.color = "white";
 });
 
-allclearBtn.addEventListener("click", function(){
+let displayValue = '';
+
+function updateDisplay(){
+    display.innerHTML = displayValue;
+}
+
+function appendToDisplay(value){
+    displayValue +=value;
+    updateDisplay();
+}
+
+function clearall(){
+    displayValue = '';
+    updateDisplay();
+}
+
+function clear(){
+    displayValue = displayValue.slice(0,-1);
+    updateDisplay();
+}
+
+function calculate(){
+    try{
+        const result = eval(displayValue);
+        displayValue = isFinite(result)? result.toString() : "Infinity";
+        displayValue = isNaN(result)? "NaN" : displayValue;
+        updateDisplay();
+    }
+
+    catch(error){
+        displayValue = " Syntax Error";
+        updateDisplay();
+    }
     
-})
+}
+
+

@@ -14,29 +14,30 @@
             <button class="normalMode"><i class="fa-regular fa-sun" style="color: #0c0d0d;"></i></button>
         </div>
         <div class="display">
-            <p id="displayid">Display</p>
+            <p id="displayid"></p>
         </div>
         
         <div class="grid-container">
-            <div class="grid-item" id="allClearBtn">AC</div>
-            <div class="grid-item" id="clearBtn">C</div>
-            <div class="grid-item" id="moduloBtn">%</div>  
-            <div class="grid-item" id="divideBtn">÷</div>
-            <div class="grid-item" id="seven">7</div>
-            <div class="grid-item" id="eight">8</div>  
-            <div class="grid-item" id="nine">9</div>
-            <div class="grid-item" id="multiplyBtn">x</div>
-            <div class="grid-item" id="four">4</div>
-            <div class="grid-item" id="five">5</div>  
-            <div class="grid-item" id="six">6</div>
-            <div class="grid-item" id="minusBtn">-</div>
-            <div class="grid-item" id="one">1</div> 
-            <div class="grid-item" id="two">2</div> 
-            <div class="grid-item" id="three">3</div> 
-            <div class="grid-item" id="plusBtn">+</div> 
-            <div class="grid-item" id="zero">0</div> 
-            <div class="grid-item" id="decimalBtn">.</div> 
-            <div class="grid-item" id="equalsBtn">=</div>  
+            <div class="grid-item" id="allClearBtn" onclick="clearall()">AC</div>
+            <div class="grid-item" id="clearBtn" onclick="clear()">C</div>
+            <div class="grid-item" id="moduloBtn" onclick="appendToDisplay('%')">%</div>  
+            <div class="grid-item" id="divideBtn" onclick="appendToDisplay('/')">/</div>
+            <div class="grid-item" id="seven" onclick="appendToDisplay('7')">7</div>
+            <div class="grid-item" id="eight" onclick="appendToDisplay('8')">8</div>  
+            <div class="grid-item" id="nine" onclick="appendToDisplay('9')">9</div>
+            <div class="grid-item" id="multiplyBtn" onclick="appendToDisplay('*')">*</div>
+            <div class="grid-item" id="four" onclick="appendToDisplay('4')">4</div>
+            <div class="grid-item" id="five" onclick="appendToDisplay('5')">5</div>  
+            <div class="grid-item" id="six" onclick="appendToDisplay('6')">6</div>
+            <div class="grid-item" id="minusBtn" onclick="appendToDisplay('-')">-</div>
+            <div class="grid-item" id="one" onclick="appendToDisplay('1')">1</div> 
+            <div class="grid-item" id="two" onclick="appendToDisplay('2')">2</div> 
+            <div class="grid-item" id="three" onclick="appendToDisplay('3')">3</div> 
+            <div class="grid-item" id="plusBtn" onclick="appendToDisplay('+')">+</div> 
+            <div class="grid-item" id="zeroZero" onclick="appendToDisplay('00')">00</div> 
+            <div class="grid-item" id="zero" onclick="appendToDisplay('0')">0</div> 
+            <div class="grid-item" id="decimalBtn" onclick="appendToDisplay('.')">.</div> 
+            <div class="grid-item" id="equalsBtn" onclick="calculate()">=</div>  
           </div>
       
     </div>
