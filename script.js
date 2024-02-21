@@ -2,7 +2,7 @@ let nightModeBtn = document.querySelector('.nightMode');
 let normalMode = document.querySelector('.normalMode');
 let calcContainer = document.querySelector('.container');
 let display = document.getElementById('displayid');
-
+let clearBtn = document.getElementById('clearBtn');
 
 
 nightModeBtn.children[0].style.color = "white";
@@ -34,10 +34,16 @@ function appendToDisplay(value){
     updateDisplay();
 }
 
+
 function clearall(){
     displayValue = '';
     updateDisplay();
 }
+
+clearBtn.addEventListener("click",function(){
+    displayValue = displayValue.slice(0,-1);
+    updateDisplay();
+});
 
 function clear(){
     displayValue = displayValue.slice(0,-1);
